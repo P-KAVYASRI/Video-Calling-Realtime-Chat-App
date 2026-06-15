@@ -15,18 +15,20 @@ streamClient.axiosInstance.defaults.timeout = 10000;
 
 export const upsertStreamUser = async (userData) => {
   try {
-    console.log("Creating Stream user:", userData);
-
-    const response = await streamClient.upsertUsers([userData]);
-
-    console.log("Stream response:", response);
-
+    await streamClient.upsertUsers([userData]);
     return userData;
   } catch (error) {
-    console.error("Stream Error Message:", error.message);
-    console.error("Stream Error:", error);
-    throw error;
+    console.error("Error upserting Stream user:", error);
   }
 };
 
-export const generateStreamToken=(userId)=>{};
+export const generateStreamToken=(userId)=>{
+    try{
+        const userIdStr = userId.toString();
+        return streamClient.createToken(userIdStr);
+
+    }
+    catch(error){
+        console.error("Error generating Stream token:", error);
+    }
+};
