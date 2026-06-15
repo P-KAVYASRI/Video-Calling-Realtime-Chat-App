@@ -10,13 +10,23 @@ if(!apiKey || !apiSecret){
 
 const streamClient = StreamChat.getInstance(apiKey, apiSecret);
 
-export  const upsertStreamUser = async(userData)=>{
-    try {
-        await streamClient.upsertUsers([userData]);
-        return userData
-    } catch (error) {
-        console.error("Error upSerting Stream user:", error);
-    }
+// increase timeout
+streamClient.axiosInstance.defaults.timeout = 10000;
+
+export const upsertStreamUser = async (userData) => {
+  try {
+    console.log("Creating Stream user:", userData);
+
+    const response = await streamClient.upsertUsers([userData]);
+
+    console.log("Stream response:", response);
+
+    return userData;
+  } catch (error) {
+    console.error("Stream Error Message:", error.message);
+    console.error("Stream Error:", error);
+    throw error;
+  }
 };
 
 export const generateStreamToken=(userId)=>{};
