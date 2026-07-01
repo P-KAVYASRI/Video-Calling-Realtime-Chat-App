@@ -84,7 +84,7 @@ streamify/
 
 ### 1. Clone the repo
 ```bash
-git clone (https://github.com/P-KAVYASRI/Video-Calling-Realtime-Chat-App)
+git clone [https://github.com/P-KAVYASRI/Video-Calling-Realtime-Chat-App]
 cd streamify
 ```
 
