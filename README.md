@@ -6,6 +6,8 @@ A production-ready **language exchange platform** with real-time chat and video 
 ![React](https://img.shields.io/badge/React-Vite-blue)
 ![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-brightgreen)
 ![Stream](https://img.shields.io/badge/Stream-Chat%20%26%20Video-orange)
+<img width="1041" height="612" alt="streamify-2026" src="https://github.com/user-attachments/assets/594f6584-e8f5-4d06-ae3e-cba1ecab5f1e" />
+
 
 ## ✨ Features
 
